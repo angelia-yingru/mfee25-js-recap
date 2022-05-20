@@ -19,38 +19,49 @@
       }
       console.log(handleAge(12));
 
-      ((color) =>{
-          switch (color) {
+      ((color) => {
+        switch (color) {
           case "red":
-              console.log("紅色");
-              break;
+            console.log("紅色");
+            break;
           case "blue":
-              console.log("藍色");
-              break;
+            console.log("藍色");
+            break;
           default:
-              console.log("其他顏色");
-      }
+            console.log("其他顏色");
+        }
       })("pink");
-      
-      const fibonacciGenerator = (n) =>{
+
+      const fibonacciGenerator = (n) => {
         let arr = [0];
-        for (let i=1; i<n - 1; i++){
-            if(i>=2){
-                num = arr[i -2] + arr[i - 1];
-                arr.push(num);
-            }else{
-                arr.push(i);
-            }
-          };
-          return arr;
-        
+        for (let i = 1; i < n - 1; i++) {
+          if (i >= 2) {
+            num = arr[i - 2] + arr[i - 1];
+            arr.push(num);
+          } else {
+            arr.push(i);
+          }
+        }
+        return arr;
       };
-      console.log(fibonacciGenerator(0)); 
-      console.log(fibonacciGenerator(5)); 
-      console.log(fibonacciGenerator(8)); 
-      console.log(fibonacciGenerator(20)); 
+      console.log(fibonacciGenerator(0));
+      console.log(fibonacciGenerator(5));
+      console.log(fibonacciGenerator(8));
+      console.log(fibonacciGenerator(20));
 
+      let animals = [
+        { id: "a1", en: "cat", cn: "貓", num: 30 },
+        { id: "a2", en: "dog", cn: "狗", num: 10 },
+        { id: "a3", en: "rabbit", cn: "兔", num: 5 },
+        { id: "a4", en: "bear", cn: "熊", num: 15 },
+        { id: "a5", en: "mouse", cn: "鼠", num: 20 },
+      ];
 
+      animals.forEach((value, index) => {
+         
+       console.log({...value, size:"small"});
+
+      });
     </script>
   </body>
 </html>
